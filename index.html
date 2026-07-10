@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <ul class="contacts__list">
-       
-    </ul>
-    <button class="contacts__update">get</button>
-    <div class="contacts__add">
-        <input type="text" class="contacts__add-name" placeholder="name">
-        <input type="number" class="contacts__add-tel" placeholder="tel">
-         <input type="text" class="contacts__add-country" placeholder="country">
-        <button class="contacts__add-button">send</button>
-    </div>
-    <div class="contacts__find">
-        <input type="number" class="contacts__id" placeholder="id">
-        <button class="contacts__send">find</button>
-    </div>
-     <div class="contacts__delete">
-        <button class="contacts__del">delete</button>
-    </div>
+    <main class="app">
+        <h1>Контакти</h1>
+        <p class="app__hint">Список, пошук і додавання</p>
+
+        <button class="contacts__update">Оновити</button>
+        <ul class="contacts__list"></ul>
+
+        <div class="panel contacts__add">
+            <h2 class="panel__title">Додати</h2>
+            <input type="text" class="contacts__add-name" placeholder="ім'я">
+            <input type="number" class="contacts__add-tel" placeholder="телефон">
+            <input type="text" class="contacts__add-country" placeholder="країна">
+            <button class="contacts__add-button">Додати</button>
+        </div>
+
+        <div class="panel contacts__find">
+            <h2 class="panel__title">Пошук</h2>
+            <input type="number" class="contacts__id" placeholder="id">
+            <button class="contacts__send">Знайти</button>
+        </div>
+
+        <div class="panel contacts__delete">
+            <button class="contacts__del">Видалити</button>
+        </div>
+
+        <p class="contacts__status" aria-live="polite"></p>
+    </main>
+
     <script src="./script.js" type="module"></script>
 </body>
 </html>
